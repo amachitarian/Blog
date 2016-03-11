@@ -8,7 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<center><br/>
+  <img src="/assets/logo.png" height="100"/><br/>
+</center><br/>
     <p class="button">Log out</p>
     <p class="button"><%= link_to "New Post", new_post_path %></p>
     <% if !user_signed_in? %>
