@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+    <p class="button">Log out</p>
+    <p class="button"><%= link_to "New Post", new_post_path %></p>
+    <% if !user_signed_in? %>
+      <p class="button"><%= link_to "Login to create a post", new_user_session_path %></p>
+    <% end %><br/>
+
+
+    <ul>
+      <li><%= link_to "Post it", root_path %></li>
+      <li><%= link_to "About me", about_path %></li>
+      <li><a href="https://www.facebook.com/ashot.makhitarian"> Facebook </a></li>
+      <li><a href="https://github.com/amachitarian/"> Github </a></li>
+      <li><a href="mailto:ashot_3@msn.nl"> Contact </a></li>
+</ul>
+
+<div id="main_content">
+		<div id="header">
+			<% if current_page?(root_path) %>
+			<% elsif current_page?(about_path) %>
+			<% else %>
+				<%= link_to "Back to All Posts", root_path %>
+			<% end %>
+
+  <% if user_signed_in? %>
+    <% end %>
+  </div>
+
+  <% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert") %>
+  <% end %>
+
+  <%= yield %>
+</div>
+
+
+
+</body>
+</html>

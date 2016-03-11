@@ -1,0 +1,274 @@
+.ashot {font-size: 70px;}
+
+.ashotmg {font-size: 40px;}
+
+.hoek {margin-left: -9px;
+margin-top: -9px;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: left;
+padding-left: 30px;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: #00b8e6  ;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+ body {
+ 	font-family: 'Raleway', sans-serif;
+
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+ 	font-weight: 500;
+ }
+
+ a {
+ 	text-decoration: none;
+ 	color: inherit;
+ }
+
+ #sidebar {
+  #logo {
+		width: 40px;
+		position: absolute;
+		right: 5em;
+		top: 3em;
+	}
+ 	ul {
+ 		list-style: none;
+ 		text-align: right;
+ 		padding-right: 3em;
+ 		.category {
+ 			font-weight: 700;
+ 			font-size: 0.7em;
+ 			text-transform: uppercase;
+ 			color: #00b8e6;
+ 		}
+ 		li {
+ 			padding: .5em 0;
+ 			a {
+ 				color: #00b8e6;
+ 				text-decoration: none;
+ 				transition: all .4s ease;
+ 				&:hover {
+ 					color: #00b8e6;
+ 				}
+ 			}
+ 		}
+ 		.active {
+ 			a {
+ 				color: #00b8e6;
+ 			}
+ 		}
+ 	}
+ 	.sign_in {
+ 		position: absolute;
+ 		right: 3em;
+ 		top: 80%;
+ 		font-size: .8em;
+ 		color: #00b8e6;
+ 	}
+ }
+
+ .button {
+ 	outline: none;
+ 	background: transparent;
+ 	border: 1px solid #d6dce0;
+ 	padding: .5em 1em;
+  float: right;
+
+ 	&:hover {
+ 		border: 1px solid #00b8e6;
+ 		color: #00b8e6;
+ 		a {
+ 			color: #00b8e6 !important;
+ 		}
+ 	}
+ }
+
+ .clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+ }
+
+ #main_content {
+ 	margin-left: 0px;
+ 	#header {
+ 		padding: 1em 3em;
+ 		p {
+ 			display: inline;
+ 		}
+ 		a {
+ 			color: #00b8e6;
+ 			text-decoration: none;
+ 		}
+ 		.buttons {
+ 			float: right;
+ 			margin-top: -6px;
+ 			.button {
+ 				font-size: .8em;
+ 				margin-right: .5em;
+ 			}
+ 		}
+ 	}
+ 	.post_wrapper {
+ 		padding: 3em;
+ 		border-bottom: 1px solid #00b8e6;
+ 		.title {
+ 			margin: 0;
+ 			a {
+ 				font-weight: 500;
+ 				text-decoration: none;
+ 				color: #2a2f35;
+ 				font-size: 1.5em;
+ 				&:hover {
+ 					color: #00b8e6;
+ 				}
+ 			}
+ 		}
+ 		.date_and_author {
+ 			color: #9eafba;
+ 			margin: .5em 0 0 0;
+ 		}
+ 	}
+ 	#post_content {
+ 		padding: 1em 3em;
+ 		.title {
+ 			font-weight: 500;
+ 			text-decoration: none;
+ 			color: #2a2f35;
+ 			font-size: 2.5em;
+ 			margin-bottom: 0;
+ 		}
+ 		.body {
+ 			font-size: 1.1em;
+ 			line-height: 1.75;
+ 		}
+ 		.date_and_author {
+ 			color: #9eafba;
+ 			margin: .5em 0 2em 0;
+ 		}
+ 		#comments {
+ 			h2 {
+ 				margin: 3em 0 1em 0;
+ 				border-bottom: 1px solid #00b8e6;
+ 				padding-bottom: 0.5em;
+ 			}
+ 			h3 {
+ 				margin-top: 2em;
+ 			}
+ 			.comment {
+ 				border-bottom: 1px solid #00b8e6;
+ 				padding: 1.5em 2em;
+ 				.clear_both {
+ 					clear: both;
+ 				}
+ 				&:after {
+ 					clear: both;
+ 				}
+ 				.comment_content {
+ 					float: left;
+ 					.comment_name {
+ 						margin: 1em 0 0 0;
+ 						font-size: 0.7em;
+ 						text-transform: uppercase;
+ 					}
+ 					.comment_body {
+ 						font-size: 1.2em;
+ 						margin: 0.2em 0 0 0;
+ 					}
+ 					.comment_time {
+ 						margin-top: 1.2em;
+ 						font-size: .8em;
+ 					}
+ 				}
+ 				.button {
+ 					float: right;
+ 				}
+ 			}
+ 			input[type="text"], textarea {
+ 				width: 50%;
+ 			}
+ 		}
+ 	}
+ 	#page_wrapper {
+ 		padding: 3em;
+ 		#profile_image {
+ 			width: 300px;
+ 			float: left;
+ 			margin-right: 2em;
+ 			img {
+ 				width: 100%;
+ 				border-radius: 0.35em;
+ 			}
+ 		}
+ 		#content {
+ 			h1 {
+ 				font-weight: 500;
+ 			}
+ 			p {
+ 				font-size: 1.1em;
+ 				line-height: 1.75;
+ 			}
+ 			a {
+ 				color: #00b8e6;
+ 				font-weight: 700;
+ 				text-decoration: none;
+ 			}
+ 		}
+ 	}
+ 	.links {
+ 		margin: 2em 0;
+ 	}
+ 	input[type="text"], input[type="email"], input[type="password"], textarea {
+ 		width: 90%;
+ 		border: 1px solid #d6dce0;
+ 		border-radius: .35em;
+ 		margin-top: 10px;
+ 		padding: .5em 1em;
+ 		line-height: 1.75;
+ 	}
+ 	input[type="text"] {
+ 		height: 35px;
+ 	}
+ 	textarea {
+ 		min-height: 180px;
+ 	}
+ 	input[type="submit"] {
+ 		outline: none;
+ 		background: transparent;
+ 		border: 1px solid #d6dce0;
+ 		padding: .5em 1.5em;
+ 		font-size: 1.1em;
+
+ 		margin-left: .0em;
+ 		&:hover {
+ 			border: 1px solid #00b8e6;
+ 			color: #00b8e6;
+ 		}
+ 	}
+ }
