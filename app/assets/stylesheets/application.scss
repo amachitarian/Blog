@@ -2,6 +2,12 @@
 
 .ashotmg {font-size: 30px;}
 
+.back {padding: 50px;
+background-color: #ffffff;
+margin-left: -20px;
+margin-bottom: -10px;
+border: 1px solid #00b8e6;}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -102,6 +108,22 @@ li a:hover:not(.active) {
  			color: #00b8e6 !important;
  		}
  	}
+ }
+ .button2 {
+   outline: none;
+   background: transparent;
+   border: 1px solid #d6dce0;
+   padding: .5em 1em;
+   margin-left: 450px;
+   margin-right: 450px;
+
+   &:hover {
+     border: 1px solid #00b8e6;
+     color: #00b8e6;
+     a {
+       color: #00b8e6 !important;
+     }
+   }
  }
 
  .clearfix:after {
