@@ -1,29 +1,30 @@
 <center>
+
 	<div id="page_wrapper">
 
 	<div id="content">
 		<h1 class="ashot">Ashot Makhitarian</h1>
 			<h1 class="ashotmg">Trainee at Codaisseur</h1>
-				<img src="/assets/code.png" height="80" />
-
+				<%= image_tag "code.png", height: 80 %>
 
 				<p>Also see my other socialmedia</p><br/><br/>
-				<a href="https://www.facebook.com/ashot.makhitarian"><img src="/assets/facebook.png" height="42" /></a>
-						<img src="/assets/between.png" height="42" />
-				<a href="https://github.com/amachitarian/"><img src="/assets/github.png" height="42" /></a>
-						<img src="/assets/between.png" height="42" />
-				<a href="https://www.linkedin.com/in/ashot-makhitarian-43a5526b?trk=hp-identity-name"><img src="/assets/linkedin.png" height="42" /></a>
-						<img src="/assets/between.png" height="42" />
-				<a href="https://www.instagram.com/ashotmg/"><img src="/assets/instagram.png" height="42" /></a><br/><br/>
+					<a href="https://www.facebook.com/ashot.makhitarian"><%= image_tag "facebook.png", height: 42 %></a>
+						<%= image_tag "between.png", height: 42 %>
+					<a href="https://github.com/amachitarian/"><%= image_tag "github.png", height: 42 %></a>
+						<%= image_tag "between.png", height: 42 %>
+					<a href="https://www.linkedin.com/in/ashot-makhitarian-43a5526b?trk=hp-identity-name"><%= image_tag "linkedin.png", height: 42 %></a>
+						<%= image_tag "between.png", height: 42 %>
+					<a href="https://www.instagram.com/ashotmg/"><%= image_tag "instagram.png", height: 42 %></a><br/><br/>
 
-    <p>Trainee at Codaisseur in Amsterdam, webdeveloper with passion and skills. I am very flexible with the ability to work different shifs when necessary and I can adapt to different shifts when necessary and I can adapt to different types of work environments easily. I have a pleasant and friendly personality with the ability to work as a team or independently.</p>
-<br/><br/>
-		<p>My WebDeveloper skills</p>
-	</div>
+					<div id="flip">Click to see about me</div>
+					<div id="panel">Trainee at Codaisseur in Amsterdam, webdeveloper with passion and skills. I am very flexible with the ability to work different shifs when necessary and I can adapt to different shifts when necessary and I can adapt to different types of work environments easily. I have a pleasant and friendly personality with the ability to work as a team or independently.</div>
 
+					<br/><br/>
+				<p>My WebDeveloper skills</p>
+		</div>
 
-<img src="/assets/skills.png" /><br/><br/><br/>
-<p class="button2"><%= link_to "Download my CV", "/assets/cv.docx", :format => 'docx' %></p>
+		<%= image_tag "skills.png", height: 130 %><br/><br/><br/>
+		<p class="button2"><%= link_to "Download my CV", "/assets/cv.docx", :format => 'docx' %></p>
 
-</center>
+	</center>
 <p class="back"></p>
