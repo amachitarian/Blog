@@ -17,10 +17,10 @@
 </center><br/>
 
     <p class="button"><%= link_to "New Post", new_post_path %></p>
+    <p class="button"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %><p/>
     <% if !user_signed_in? %>
       <p class="button"><%= link_to "Login to create a post", new_user_session_path %></p>
     <% end %><br/>
-
 
     <ul>
       <li><%= link_to "Post it", root_path %></li>
