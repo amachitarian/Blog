@@ -5,15 +5,17 @@
   <title>Blog</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
 </head>
 <body>
 
 <center><br/>
-  <img src="/assets/logo.png" height="100"/><br/>
+  <%= image_tag "logo.png", height: 100 %>
+
 </center><br/>
-    <p class="button"><%= link_to "Log out", destroy_user_session_path %></p>
+
     <p class="button"><%= link_to "New Post", new_post_path %></p>
     <% if !user_signed_in? %>
       <p class="button"><%= link_to "Login to create a post", new_user_session_path %></p>
@@ -46,8 +48,6 @@
 
   <%= yield %>
 </div>
-
-
 
 </body>
 </html>
