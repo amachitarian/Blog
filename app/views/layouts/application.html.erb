@@ -2,58 +2,173 @@
 <html>
 <head>
 
+
   <title>Blog</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 
-<center><br/>
-  <%= image_tag "logo.png", height: 100 %>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                  <i class="fa fa-bars"></i>
+              </button>
 
-</center><br/>
+          </div>
+          <br/>
+          <%= image_tag "logo.png", height: 50 %>
 
-  <div class="lower">
-    <p class="button"><%= link_to "New Post", new_post_path %></p>
-  </div>
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+
+              <ul class="nav navbar-nav">
+                  <li class="hidden">
+
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#bot"> <% if !user_signed_in? %>
+                          <%= link_to "Login to create a post", new_user_session_path %>
+                          <% end %></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#about"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#download"><%= link_to "New Post", new_post_path %></a>
+                  </li>
+
+              </ul>
+          </div>
+      </div>
+
+  </nav>  <header class="intro">
+      <div class="intro-body">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-offset-2"><br/><br/><br/><br/><br/><br/><br/><br/>
+
+                      <h1 class="brand-heading">A.Makhitarian</h1>
+                      <p class="intro-text">Junior web developer with great passion <br>  and big thrive for success.</p><br/><br/>
+                      <center>
+                      <%= image_tag "code.png", height: 80 %>
+                    </center>
+                      <a href="#about" class="btn btn-circle page-scroll">
+                          <i class="fa fa-angle-double-down animated"></i>
+                      </a>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <section id="about" class="container content-section text-center">
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+              <h2>About me</h2><p>
+              I am a passionate and skilled webdeveloper who is currently doing an intership<br/> at Codaisseur in Amsterdam.
+
+              When it comes to work, I am very flexibile and<br/> have a high adaptability. I will adapt to any situation without a problem.<br/>
+
+              Personality wise, I am a very social and easy-going person.<br/> I enjoy working as a team, but I also work well independently.</p></div>
+      </div>
+  </section>
+
+  <section id="download" class="content-section text-center">
+      <div class="download-section">
+          <div class="container">
+              <div class="col-lg-8 col-lg-offset-2">
+                  <h2>this blog is made in rails</h2>
+                  <p>You can download the repository of this blog on my GitHub</p><br/>
+                  <a href="https://github.com/amachitarian" class="btn btn-default btn-lg">go to GitHub</a><br/><br/><br/><br/>
+                  <p>my skills as a Webdeveloper</p><br/>
+
+                  <h2>
+                      HTML   XHTML   CSS   Javascript   JSON   jquery   Ruby on rails
+                      RSPEC   MVC   API   Heroku   bootstrap   react   pixelmator<br/></h2>
+
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="contact" class="container content-section text-center">
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+              <h2>Also see my other socialmedia</h2>
+              <p> Feel free to mail me for any questions you have</p><br/>
+              <p><a href="mailto:ashot_3@msn.com">Mail me</a><br/><br/>
+              </p>
+              <ul class="list-inline banner-social-buttons">
+                  <li>
+                      <a href="https://www.facebook.com/ashot.makhitarian" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Facebook</span></a>
+                  </li>
+                  <li>
+                      <a href="https://www.linkedin.com/in/ashot-makhitarian-43a5526b?trk=hp-identity-name" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/ashotmg/" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Instagram</span></a>
+                  </li>
+              </ul>
+          </div>
+      </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+  <script src="js/jquery.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/jquery.easing.min.js"></script>
+
+  <script src="js/grayscale.js"></script>
+  <center>
+          <div id="main_content">
+              <div id="header">
+                <p class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name"> <%= link_to "Back to All Posts", root_path %> </span></p><br/><br/><br/><br/>
+
+                <h3>
+                <% if current_page?(root_path) %>
+                <% elsif current_page?(about_path) %>
+                <% else %>
+
+                <% end %>
+
+            <% if user_signed_in? %>
+              <% end %>
+            </h3>
+            </div>
+
+            <% flash.each do |name, msg| %>
+            <%= content_tag(:div, msg, class: "alert") %>
+            <% end %>
+
+            <%= yield %>
+          </div>
+        </center><br/><br/><br/><br/><br/>
 
 
-    <p class="button"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %><p/>
+          <footer>
+              <div class="container text-center">
+                  <p>Copyright &copy; A.Makhitarian Blog 2015</p>
+              </div>
+          </footer>
 
-
-    <% if !user_signed_in? %>
-      <div class="login"><p class="button"><%= link_to "Login to create a post", new_user_session_path %></p></div>
-    <% end %><br/>
-
-    <ul>
-      <li><%= link_to "Post it", root_path %></li>
-      <li><%= link_to "About me", about_path %></li>
-      <li><a href="https://www.facebook.com/ashot.makhitarian"> Facebook </a></li>
-      <li><a href="https://github.com/amachitarian/"> Github </a></li>
-      <li><a href="mailto:ashot_3@msn.nl"> Contact </a></li>
-</ul>
-
-<div id="main_content">
-		<div id="header">
-			<% if current_page?(root_path) %>
-			<% elsif current_page?(about_path) %>
-			<% else %>
-				<%= link_to "Back to All Posts", root_path %>
-			<% end %>
-
-  <% if user_signed_in? %>
-    <% end %>
-  </div>
-
-  <% flash.each do |name, msg| %>
-  <%= content_tag(:div, msg, class: "alert") %>
-  <% end %>
-
-  <%= yield %>
-</div>
 
 </body>
 </html>
